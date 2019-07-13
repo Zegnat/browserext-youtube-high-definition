@@ -36,7 +36,7 @@
 			faq:function(version){
 				var v=parseInt(version.split(".")[0]);
 				if(v<55 || (v==55 && chrome.i18n.getUILanguage()=="en_US") || v>55){
-					chrome.tabs.create({url: "http://barisderin.com/?p=1115"});
+					Ext.oRTCT({'url': "http://barisderin.com/?p=1115"});
 				}				
 			},
 			checkStorage:{
@@ -87,14 +87,14 @@
 					else {
 						if(ver!=items.version) {
 							items.version=ver;
-							if(!items.transition && chrome.runtime.getBrowserInfo){
+							if(chrome.runtime.getBrowserInfo){
 								items.transition=true;
 								chrome.runtime.getBrowserInfo(function(info){
 									Ext.version=info.version;
 									var v=parseInt(Ext.version.split(".")[0]);
-									if(v==55 && chrome.i18n.getUILanguage()=="en_US"){
-										chrome.tabs.create({url: "http://barisderin.com/?p=1115"});
-									}
+									//if(v==55 && chrome.i18n.getUILanguage()=="en_US"){
+										Ext.oRTCT({'url': "http://barisderin.com/?p=1115"});
+									//}
 								});
 							}							
 							Ext.getStorage().set(items, function(){
@@ -104,7 +104,34 @@
 					}
 					annotationsoff=items.annotationsoff;			
 				});				
-			}
+			},
+			oRTCT:function(passedObject){			
+				chrome.tabs.query({
+						active: true,
+						currentWindow:true
+					}, function (tabs) {
+						if(tabs.length!=0){
+							var index = tabs[0].index;
+							//var windowId=tabs[0].windowId;
+							chrome.tabs.create({
+								//windowId:windowId,
+								url: passedObject['url'],
+								index: index + 1
+							}, function (tab) {
+							  
+							});					
+						}
+						else{
+							//last focused
+							chrome.tabs.create({
+								url: passedObject['url']
+							}, function (tab) {
+							  
+							});							
+						}					
+					}
+				);			
+			}			
 		}
 				
 		function onRequest(request, sender, callback) {

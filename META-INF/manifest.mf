@@ -7,23 +7,23 @@ SHA1-Digest: 5fhJwbsIntkvM0iYHBDszllZc8w=
 
 Name: background.js
 Digest-Algorithms: MD5 SHA1
-MD5-Digest: /zG4IUDZoYVIi+SQ23BY2Q==
-SHA1-Digest: IFtu0eDhK3GNWjku+yjf7sFdjac=
+MD5-Digest: yuTAgOYb+znhOBsuQiEjSQ==
+SHA1-Digest: VI5Zx7qJUwGMbXR8zTEZstzWtXM=
 
 Name: manifest.json
 Digest-Algorithms: MD5 SHA1
-MD5-Digest: ELpfgft2hZMPnzFuFTVIWQ==
-SHA1-Digest: qwdEK+lYrSpIsey/kDDXw6lpZg4=
+MD5-Digest: 6MPBppyIhuIPq6tp0JkG/w==
+SHA1-Digest: jE7ccYjgCvTWt9tlZ92HmFYKxu8=
 
 Name: popup.html
 Digest-Algorithms: MD5 SHA1
-MD5-Digest: e79nV1LweCX4W1NsJiNfsg==
-SHA1-Digest: Z/RRRCD3sOf+j66eF6NHG4bMBcw=
+MD5-Digest: 0dAaZM2Ge3agGEJAJ6s0Yw==
+SHA1-Digest: IlHjuyYGcONoB3epUxodMYEbhAw=
 
 Name: popup.js
 Digest-Algorithms: MD5 SHA1
-MD5-Digest: sb+VJAaPLwKjDzMZ8pDhMA==
-SHA1-Digest: xZ3ZampOGGr6DwonMSWQHgDx5n0=
+MD5-Digest: BegLGFj3dRVAON51mFTX5w==
+SHA1-Digest: 4Tidxc+AMMAIkE7775TzVhTIa6o=
 
 Name: _locales/en/messages.json
 Digest-Algorithms: MD5 SHA1
