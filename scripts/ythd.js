@@ -803,6 +803,16 @@ var YouTubeHighDefinition = {
 		else{
 			document.getElementById("youtubehighdefinition-stylesheet").parentNode.removeChild(document.getElementById("youtubehighdefinition-stylesheet"));
 		}
+	},
+	setPSpeed:function(){
+		var ythdinterval=window.setInterval(function(){
+			var player=document.getElementById("movie_player");
+			if(checkPlayerReady(player)) {
+				player.setPlaybackRate(videoplayerspeed);
+				window.clearInterval(ythdinterval);
+				//YTVideoPlayerSpeed.changeVideoSize(doc,YTVideoPlayerSpeed.size);
+			}				
+		},50);		
 	}
 };
 
