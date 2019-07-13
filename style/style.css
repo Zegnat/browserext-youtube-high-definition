@@ -1,0 +1,89 @@
+
+	#watch7-video {width: 100% !important; margin-left: 0 !important;}
+	#watch7-player {width: auto !important; padding-left: 0 !important;}
+	#player-mole-container {width: 100% !important; height: 100% !important;}	
+	#player-api { height: 100% !important;}
+	#watch7-main-container {padding-left: 0 !important;}
+	/*#watch7-content {width: calc(100% - 400px) !important; margin-right: 0 !important;}*/
+	#watch7-sidebar {margin-top: 0px !important;}
+	#movie_player {width: 100% !important; margin-left: 0 !important;}		
+	#player {width: auto !important; padding-left: 0 !important;max-width:none !important;margin-top: 0px !important;top: 0 !important;}
+	/*#guide {display: none !important;}*/
+	.guide-collapsed #content {/*margin-left: 0 !important;*/}
+	#page {padding-top: 0 !important;}
+	#masthead-positioner {position:static !important;}
+	#masthead-positioner-height-offset {display:none !important;}
+	#placeholder-player{display:none !important;}
+	
+	#playlist-autoscroll-list{max-height: 430px !important;}
+	#watch-appbar-playlist{height:490px !important;}				
+	#watch-appbar-playlist > div.main-content{height:490px !important;}
+
+	body.fullytflp #player-api { width:100% !important;margin-left:0!important;left:0 !important;}				
+	
+	 /*html5 */
+	.html5-main-video{width:100% !important;height:100% !important;left:0 !important;top:0 !important;}
+	.html5-progress-bar{width:100% !important;}
+	.video-ads .ad-container{width:100% !important;height:100% !important;}
+	
+	/*.watch-stage-mode .player-width {left:0 !important;}
+	.content-snap-width-skinny-mode .player-width, .watch-stage-mode .player-width{margin-left: 0 !important;}	*/			
+	
+	/* Min Version
+	#masthead-positioner {position:static !important;}
+	#masthead-positioner-height-offset {display:none !important;}
+	#player-api,#player-mole-container {width: 100% !important; height: 100% !important;}
+	#player {width: auto !important; padding-left: 0 !important;max-width:none !important;margin-top: 0px !important;}
+	*/				
+	
+	#theater-background{
+		height:100% !important;
+	}
+	
+	#movie_player.html5-video-player{
+		overflow:visible !important;
+	}
+	
+	#player-api{
+		height:100% !important;
+	}
+	
+	.html5-video-container{
+		/*width:1903px !important;*/
+		/*margin-left:-327px !important;*/
+		height:100% !important;
+		background-color:black !important;
+	}
+	
+	.html5-main-video{
+		width:100% !important;
+		height:100% !important;
+	}
+	
+	.ytp-fullscreen div.html5-video-container{
+		margin-left:0 !important;
+		width:100% !important;
+	}
+	
+	.html5-video-player .ytp-upnext{
+		top:0 !important;
+	}
+
+	.html5-video-player div.ad-container {
+		top:0 !important;
+	}
+	
+	#masthead-container{
+		position:static !important;
+	}
+	#page-manager{
+		margin-top:0 !important;
+	}
+
+	ytd-watch[theater] #player.ytd-watch {
+		max-height:unset !important;
+		/*height:unset !important;*/
+	}
+	
+	#masthead #ticker{display:none !important;}
+	
