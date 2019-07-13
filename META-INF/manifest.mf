@@ -12,13 +12,13 @@ SHA1-Digest: VI5Zx7qJUwGMbXR8zTEZstzWtXM=
 
 Name: manifest.json
 Digest-Algorithms: MD5 SHA1
-MD5-Digest: 6MPBppyIhuIPq6tp0JkG/w==
-SHA1-Digest: jE7ccYjgCvTWt9tlZ92HmFYKxu8=
+MD5-Digest: +e7XLpovGfbc+g5uEhi54Q==
+SHA1-Digest: Vm4L5cFYaQTRGpmx5+aJNJspvHY=
 
 Name: popup.html
 Digest-Algorithms: MD5 SHA1
-MD5-Digest: 0dAaZM2Ge3agGEJAJ6s0Yw==
-SHA1-Digest: IlHjuyYGcONoB3epUxodMYEbhAw=
+MD5-Digest: jJwP8lvssfgOL4dKQ66FLg==
+SHA1-Digest: cCAD6R6iNpo2FwLOaGSAkYUvYgc=
 
 Name: popup.js
 Digest-Algorithms: MD5 SHA1

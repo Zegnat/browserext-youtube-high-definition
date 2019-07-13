@@ -1,38 +1,44 @@
 {
-   "name": "__MSG_appName__",
-   "description": "__MSG_appDesc__",
-   "default_locale": "en",
-  "version": "62.0",
-   "icons": {
-      "128": "images/icons/icon_128.png",
-      "32": "images/icons/icon_32.png",
-      "48": "images/icons/icon_48.png"
-   }, 
-  "background": {
-    "scripts": ["background.js"]
-  },
-   "browser_action": {
-      "default_icon": "images/icons/icon_24.png",
-      "default_popup": "popup.html",
-      "default_title": "YouTube High Definition"
-   },
-  "manifest_version": 2,
-     "content_scripts": [ {
-      "js": [ "scripts/content_script.js" ],
-      "matches": [ "*://*.youtube.com/*" ],
-      "run_at": "document_start",
-	  "all_frames":true
-   },
-   {
-      "js": [ "scripts/content_script_st.js" ],
-      "matches": [ "*://*.barisderin.com/*" ],
-      "run_at": "document_start"
-   }],
-   "permissions": [ "tabs", "storage", "management", "downloads", "cookies", "contextMenus", "webRequest", "webRequestBlocking", "<all_urls>"],
-   "web_accessible_resources": ["style/*","scripts/*"],
-	"applications": {
-	  "gecko": {
-		"id": "{7b1bf0b6-a1b9-42b0-b75d-252036438bdc}"
-	  }
-	} 
+    "name": "__MSG_appName__",
+    "description": "__MSG_appDesc__",
+    "default_locale": "en",
+    "version": "63.0",
+    "icons":
+    {
+        "128": "images/icons/icon_128.png",
+        "32": "images/icons/icon_32.png",
+        "48": "images/icons/icon_48.png"
+    },
+    "background":
+    {
+        "scripts": ["background.js"]
+    },
+    "browser_action":
+    {
+        "default_icon": "images/icons/icon_24.png",
+        "default_popup": "popup.html",
+        "default_title": "__MSG_appName__"
+    },
+    "manifest_version": 2,
+    "content_scripts": [
+    {
+        "js": ["scripts/content_script.js"],
+        "matches": ["*://*.youtube.com/*"],
+        "run_at": "document_start",
+        "all_frames": true
+    },
+    {
+        "js": ["scripts/content_script_st.js"],
+        "matches": ["*://*.barisderin.com/*"],
+        "run_at": "document_start"
+    }],
+    "permissions": ["tabs", "storage", "management", "downloads", "cookies", "contextMenus", "webRequest", "webRequestBlocking", "<all_urls>"],
+    "web_accessible_resources": ["style/*", "scripts/*"],
+    "applications":
+    {
+        "gecko":
+        {
+            "id": "{7b1bf0b6-a1b9-42b0-b75d-252036438bdc}"
+        }
+    }
 }
