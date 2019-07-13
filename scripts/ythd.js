@@ -672,6 +672,102 @@ var YouTubeHighDefinition = {
 			//chrome.cookies.set({"url": ".youtube.com", "name": "wide", "value": 0});
 		}
 		
+		else if(currentvideosize=="default") {
+			
+			if(isOptionHandle){
+				
+				//if(dc.body.classList.contains("fullytpagesize")) {
+					
+					if(dc.querySelector("#player.ytd-watch")){
+						dc.querySelector("#player.ytd-watch").removeAttribute('style');
+					}
+					if(dc.getElementsByClassName("html5-video-container")[0]) {
+						dc.getElementsByClassName("html5-video-container")[0].removeAttribute('style');
+					}						
+					if(dc.getElementById("player-api")){
+						dc.getElementById("player-api").style.removeProperty("margin-left");
+					}					
+					/*
+					if(dc.getElementById("related")){
+						dc.getElementById("related").style.removeProperty("top");
+					}
+					*/
+					if(dc.getElementById("watch-appbar-playlist")){
+						dc.getElementById("watch-appbar-playlist").style.removeProperty("left");
+					}
+					if(dc.getElementById("watch-appbar-playlist")){
+						dc.getElementById("watch-appbar-playlist").style.removeProperty("margin-top");
+					}
+					
+					/*
+					if(dc.getElementsByClassName("ytp-size-toggle-small")[0]){
+						dc.getElementsByClassName("ytp-size-toggle-small")[0].click();
+					}					
+					if (dc.querySelector("ytd-watch[theater]")) {
+						dc.getElementsByClassName("ytp-size-button")[0].click();
+					}						
+					if(dc.querySelector(".ytp-size-button[title*=Default]") || dc.querySelector("ytd-watch[theater]")){
+						if(dc.querySelector(".ytp-size-button[title*=Default]")) {
+							dc.querySelector(".ytp-size-button[title*=Default]").click();
+						}
+					} 						
+					*/						
+					
+					if((dc.querySelector(".ytp-size-button path") && dc.querySelector(".ytp-size-button path").getAttribute("d").indexOf("m 26,")==0) || dc.querySelector("ytd-watch[theater]")){							
+						if((dc.querySelector(".ytp-size-button path") && dc.querySelector(".ytp-size-button path").getAttribute("d").indexOf("m 26,")==0) && dc.querySelector(".ytp-size-button path").parentNode.parentNode) {
+							dc.querySelector(".ytp-size-button path").parentNode.parentNode.click();
+						}
+					}						
+					
+					
+					if(dc.getElementById("watch7-container") && dc.getElementById("watch7-container").classList.contains('watch-wide')){
+						dc.getElementById("watch7-container").classList.remove('watch-wide');
+					} 
+					/*if(dc.getElementById("watch7-container") && dc.getElementById("watch7-container").classList.contains('watch-medium')){
+						dc.getElementById("watch7-container").classList.remove('watch-medium');
+					}*/
+					if(dc.getElementById("player") && dc.getElementById("player").classList.contains('watch-playlist-collapsed')){
+						dc.getElementById("player").classList.remove('watch-playlist-collapsed');	
+					} 						
+					if(dc.getElementById("player") && dc.getElementById("player").classList.contains('watch-medium')){
+						dc.getElementById("player").classList.remove('watch-medium');
+					} 
+					if(dc.getElementById("player")){
+						dc.getElementById("player").classList.add('watch-small');
+					}
+					if(dc.getElementById("page")){
+						dc.getElementById("page").classList.add('watch-non-stage-mode');
+					}					
+					if(dc.getElementById("player") && dc.getElementById("player").classList.contains('watch-wide')){
+						dc.getElementById("player").classList.remove('watch-wide');
+					}
+					if(dc.getElementById("page") && dc.getElementById("page").classList.contains('watch-stage-mode')) {
+						dc.getElementById("page").classList.remove('watch-stage-mode');
+					}
+
+					if(isOptionHandle){
+						dc.defaultView.scrollTo(0,0);
+					}
+					
+					var interwal=dc.defaultView.setInterval(function(){
+								
+						if((dc.querySelector(".ytp-size-button path") && dc.querySelector(".ytp-size-button path").getAttribute("d").indexOf("m 26,")==0) || dc.querySelector("ytd-watch[theater]")){								
+							if((dc.querySelector(".ytp-size-button path") && dc.querySelector(".ytp-size-button path").getAttribute("d").indexOf("m 26,")==0) && dc.querySelector(".ytp-size-button path").parentNode.parentNode) {
+								dc.querySelector(".ytp-size-button path").parentNode.parentNode.click();
+								//dc.defaultView.clearInterval(interwal)					
+							}
+						}
+						else {
+							dc.defaultView.clearInterval(interwal)	
+						}
+					},1000)							
+					
+				//}	
+				
+			}
+			
+		}		
+		
 		if(dc.body) dc.body.classList.add("fullytpagesize");
 				
 	},	

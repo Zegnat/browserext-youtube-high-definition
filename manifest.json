@@ -2,7 +2,7 @@
    "name": "__MSG_appName__",
    "description": "__MSG_appDesc__",
    "default_locale": "en",
-  "version": "61.28",
+  "version": "61.29",
    "icons": {
       "128": "images/icons/icon_128.png",
       "32": "images/icons/icon_32.png",
