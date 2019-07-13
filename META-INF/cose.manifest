@@ -136,13 +136,3 @@ Digest-Algorithms: SHA1 SHA256
 SHA1-Digest: C1UQ5272fge0bSDge1gw66rp8TQ=
 SHA256-Digest: FntGGTkEX3qEMnDW5qXnwNaSOZYPFWg+EK/d739Fco0=
 
-Name: META-INF/cose.manifest
-Digest-Algorithms: SHA1 SHA256
-SHA1-Digest: rCJRzSinkGH6cyCSFtJjl8oXjgI=
-SHA256-Digest: 3nfViodnIrtuTLkjZMRetpEdSRfRXDhQrcWU2KLqUvo=
-
-Name: META-INF/cose.sig
-Digest-Algorithms: SHA1 SHA256
-SHA1-Digest: 2t9oSttmggi33H2nA/Vbz2LIb+8=
-SHA256-Digest: 3NSYvurX3gZT6BFrf6Q/BRTKP5CWS0i3qWIb+cv/qY8=
-

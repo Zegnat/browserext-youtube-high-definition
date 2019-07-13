@@ -102,7 +102,8 @@ var YouTubeHighDefinition = {
 	},
 	checkI:function(doc,quality,volume,volumelevel,youtubevideoautoplaybehavior,playlistvideoautoplaybehavior,isOptionHandle){
 		var player=YouTubeHighDefinition.ytPlayer;
-		player.setPlaybackQuality(quality);	
+		//player.setPlaybackQuality(quality);
+		player.setPlaybackQualityRange(quality,quality);
 	},
 	onSPFDone:function(event){
 		var doc=event.currentTarget.document;
@@ -123,12 +124,12 @@ var YouTubeHighDefinition = {
 		if(typeof player.getAdState!=="undefined" && player.getAdState()!=1){
 			if(document.location.search.indexOf('list=') != -1){
 				if(!enableplaylistautoplay){
-					player.pauseVideo();
+					//player.pauseVideo();
 				}
 			}
 			else{
 				if(!enableautoplay){
-					player.pauseVideo();
+					//player.pauseVideo();
 				}
 			}							
 		}		
@@ -289,11 +290,12 @@ var YouTubeHighDefinition = {
 							//if(isOptionHandle) player.stopVideo();
 							//player.seekTo(cTime);
 							//player.pauseVideo();
-							player.setPlaybackQuality("small");
-							player.setPlaybackQuality(currentvideoquality);
+							//player.setPlaybackQuality("small");
+							//player.setPlaybackQuality(currentvideoquality);
+							player.setPlaybackQualityRange(currentvideoquality,currentvideoquality)
 							//player.playVideo();
 							if(!enableautoplay) {
-								player.pauseVideo();
+								//player.pauseVideo();
 							}
 						}
 						else {
@@ -305,10 +307,11 @@ var YouTubeHighDefinition = {
 							//if(isOptionHandle) player.stopVideo();
 							//player.seekTo(cTime);
 							//player.pauseVideo();
-							player.setPlaybackQuality(currentvideoquality);
+							//player.setPlaybackQuality(currentvideoquality);
+							player.setPlaybackQualityRange(currentvideoquality,currentvideoquality)
 							//player.playVideo();
 							if(!enableautoplay) {
-								player.pauseVideo();
+								//player.pauseVideo();
 							}
 						}
 						
@@ -864,12 +867,12 @@ try{
 			if(player.getCurrentTime()==0 && newState==1){
 				if(document.location.search.indexOf('list=') != -1) {
 					if(!enableplaylistautoplay) {
-						player.pauseVideo();
+						//player.pauseVideo();
 					}
 				}
 				else{
 					if(!enableautoplay) {
-						player.pauseVideo();							
+						//player.pauseVideo();							
 					}
 				}			
 			}			
@@ -877,12 +880,12 @@ try{
 				if(typeof player.getAdState!=="undefined" && player.getAdState()!=1) {								
 					if(document.location.search.indexOf('list=') != -1) {
 						if(!enableplaylistautoplay) {
-							player.pauseVideo();	
+							//player.pauseVideo();	
 						}
 					}
 					else{
 						if(!enableautoplay) {
-							player.pauseVideo();	
+							//player.pauseVideo();	
 						}
 					}								
 				}							
@@ -890,13 +893,13 @@ try{
 			if(document.getElementsByTagName("video").length==0 && newState==1 && player.getCurrentTime() < 1 && window.ythdFlPlayerPaused == false){
 				if(document.location.search.indexOf('list=') != -1){
 					if(!enableplaylistautoplay) {
-						player.pauseVideo();	
+						//player.pauseVideo();	
 						window.ythdFlPlayerPaused = true;
 					}
 				}
 				else{
 					if(!enableautoplay){
-						player.pauseVideo();	
+						//player.pauseVideo();	
 						window.ythdFlPlayerPaused = true;
 					}
 				}							
@@ -906,12 +909,12 @@ try{
 					if(typeof player.getAdState!=="undefined" && player.getAdState()!=1){
 						if(document.location.search.indexOf('list=') != -1){
 							if(!enableplaylistautoplay){
-								player.pauseVideo();	
+								//player.pauseVideo();	
 							}
 						}
 						else{
 							if(!enableautoplay){
-								player.pauseVideo();	
+								//player.pauseVideo();	
 							}
 						}								
 					}
@@ -925,17 +928,19 @@ try{
 							if(typeof player.getAdState!=="undefined" && player.getAdState()!=1){
 								if(document.location.search.indexOf('list=') != -1){
 									if(!enableplaylistautoplay){
-										player.pauseVideo();
+										//player.pauseVideo();
 									}
 								}
 								else{
 									if(!enableautoplay){
-										player.pauseVideo();
+										//player.pauseVideo();
 									}
 								}							
 							}											
-						}											
-						player.setPlaybackQuality(YouTubeHighDefinition.getSetVideoQuality(player,currentvideoquality));
+						}
+						var mxx=YouTubeHighDefinition.getSetVideoQuality(player,currentvideoquality);											
+						//player.setPlaybackQuality(mxx);
+						player.setPlaybackQualityRange(mxx,mxx)
 						if (player.getPlaybackQuality() === YouTubeHighDefinition.getIntendedQuality(player,currentvideoquality)){
 							window.clearInterval(ythdonPlayerStateChangeInterval);
 						}
@@ -959,12 +964,12 @@ try{
 			if(typeof player.getAdState!=="undefined" && player.getAdState()!=1){
 				if(document.location.search.indexOf('list=') != -1){
 					if(!enableplaylistautoplay){
-						player.pauseVideo();
+						//player.pauseVideo();
 					}
 				}
 				else{
 					if(!enableautoplay){
-						player.pauseVideo();	
+						//player.pauseVideo();	
 					}
 				}							
 			}							
@@ -978,17 +983,19 @@ try{
 					if(typeof player.getAdState!=="undefined" && player.getAdState()!=1){
 						if(document.location.search.indexOf('list=') != -1) {
 							if(!enableplaylistautoplay){
-								player.pauseVideo();
+								//player.pauseVideo();
 							}
 						}
 						else{
 							if(!enableautoplay){
-								player.pauseVideo();	
+								//player.pauseVideo();	
 							}
 						}
 					}									
 				}
-				player.setPlaybackQuality(YouTubeHighDefinition.getSetVideoQuality(player,currentvideoquality));
+				var mxx=YouTubeHighDefinition.getSetVideoQuality(player,currentvideoquality);
+				//player.setPlaybackQuality(mxx);
+				player.setPlaybackQualityRange(mxx,mxx);
 				if (player.getPlaybackQuality() === YouTubeHighDefinition.getIntendedQuality(player,currentvideoquality)){
 					window.clearInterval(onYouTubePlayerReadyInterval);
 				}
